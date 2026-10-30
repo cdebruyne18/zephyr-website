@@ -23,7 +23,7 @@ Keep that terminal running while you work. Stop it with Control+C. If port 5173 
 - Header links open the story and jump to the notification form.
 - The page uses #FAF9F6 for a hint of cream, navy text, and restrained red accents. The original cream remains a brand color.
 - The original Z artwork is centered in the header, with a continuous CSS perspective rotation at a constant speed (one full turn every 14 seconds). Click the mark to pause or resume. Reduced-motion preferences keep it still. This is a rotating flat graphic, not a modeled 3D object.
-- Drop One and both product categories lead the page; the lengthy hero is removed. The story is collapsed by default and can be opened from the header or its own disclosure.
+- Two full-width lifestyle photos (lobster traps and the harbor) sit side by side directly under the red brand banner, so they are the first thing visitors see. Drop One and both product categories follow; the old passport hero is still gone. The story is collapsed by default and can be opened from the header or its own disclosure.
 - “Rooted in New England.” sits at the top left; the bottom footer is removed. The brand banner uses red #A24857 with cream #EDE5D3 lettering.
 - “First to know.” is a simple email row. The Deep Roots section includes the three supplied Fenway and beach photographs in a compact strip.
 - The favicon uses the supplied serif logo; original image files are unchanged.
@@ -48,7 +48,7 @@ The live reference website supplied by the user is https://zephyrarchive.com. It
 
 ## Recommended direction
 
-Use a nearly white `#FAF9F6` background with navy `#3B4967` and red `#A24857`. Center the Z artwork above a narrow **“For those that live between worlds.”** banner, then lead with **Drop One** and the two product categories. Keep the signup compact and the full story behind its disclosure. These are the user's revisions to the original direction.
+Use a nearly white `#FAF9F6` background with navy `#3B4967` and red `#A24857`. Center the Z artwork above a narrow **“For those that live between worlds.”** banner, then lead with the two waterfront lifestyle photos, followed by **Drop One** and the two product categories. Keep the signup compact and the full story behind its disclosure. These are the user's revisions to the original direction.
 
 The biggest missing piece is actual product photography. Exact release date, prices, colors, fit, materials, and product names remain unconfirmed. None are invented in the starter content.
 

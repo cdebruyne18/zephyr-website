@@ -9,7 +9,7 @@ The user's current instructions take precedence over this proposed handoff.
 - Use the existing stack if this pack is added to a project. Otherwise start with plain HTML, CSS, and JavaScript, without external dependencies.
 - Keep the site quiet, responsive, accessible, and focused on a November hats-and-hoodies release.
 - Keep the confirmed brand palette (red #A24857, navy #3B4967, cream #EDE5D3), but use #FAF9F6 as the page background per the user's latest request for only a hint of cream. Use navy text and restrained red accents.
-- Preserve the compact layout: centered Z for Zephyr artwork with pausable 3D-style rotation; one-line brand banner; Drop One and both product categories immediately below. Keep products side by side on mobile, the signup compact, and the story collapsed by default. Do not restore the tall passport hero or full-width navy story section.
+- Preserve the compact layout: centered Z for Zephyr artwork with pausable 3D-style rotation; one-line brand banner; the two full-width lifestyle photos side by side directly beneath it; then Drop One and both product categories. Keep the lifestyle photos and products side by side on mobile, the signup compact, and the story collapsed by default. Do not restore the tall passport hero or full-width navy story section.
 - The brand banner is red #A24857 with cream #EDE5D3 lettering. Keep “Rooted in New England.” at the top left, the three supplied lifestyle photos beneath Deep Roots, and no bottom footer.
 - Use supplied logos. Do not replace the wordmark with a similar typed font or invent new brand marks.
 - Do not invent product photos, names, prices, specifications, availability, reviews, or an exact launch date.

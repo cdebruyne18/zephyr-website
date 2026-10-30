@@ -10,4 +10,7 @@
 - `roots-beach-sand.jpg`: web-sized JPEG from `IMG_3154.heic` in the supplied Downloads folder.
 - `roots-beach-ocean.jpg`: web-sized JPEG from `IMG_3152.heic` in the supplied Downloads folder.
 - These three photos appear under Deep Roots. The derivatives are resized and format-converted only; their originals remain unchanged. Beach JPEGs retain their orientation metadata.
+- `lifestyle-lobster-traps.jpg`: 1400×1750 JPEG (quality 82) resized from a 4316×5395 photo the user supplied in chat on 2026-10-30 (lobster traps on a wharf).
+- `lifestyle-harbor.jpg`: 1400×1750 JPEG (quality 82) resized from a 4640×5800 photo the user supplied in chat on 2026-10-30 (standing above the harbor).
+- These two photos lead the page directly under the red brand banner. They were resized only; keep the full-resolution originals outside this folder.
 - Category wells remain explicitly labeled placeholders pending selected product photography for the upcoming drop.

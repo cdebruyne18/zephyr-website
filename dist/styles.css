@@ -45,6 +45,10 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .emblem-back { transform: rotateY(180deg) translateZ(1px); }
 .brand-banner { background: var(--red); color: var(--cream); text-align: center; padding: .55rem 1rem; }
 .brand-banner p { font: italic 1.1rem/1.5 var(--serif); }
+.lifestyle { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+.lifestyle img { width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 92vh; object-fit: cover; background: #f0efeb; }
+.lifestyle .lifestyle-traps { object-position: 50% 30%; }
+.lifestyle .lifestyle-harbor { object-position: 50% 25%; }
 .release { padding-block: 1.65rem 2rem; }
 .release-heading { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; margin-bottom: 1.4rem; }
 h1 { font-size: clamp(2.75rem, 5vw, 4.25rem); line-height: 1.1; letter-spacing: -.045em; }
@@ -97,6 +101,7 @@ h1 > span { color: var(--red); }
   .nav-right a { padding-block: .3rem !important; }
   .emblem-scene { width: 67px; height: 97px; }
   .brand-banner p { font-size: 1rem; }
+  .lifestyle { gap: 2px; }
   .release { padding-block: 1.25rem 1.5rem; }
   .release-heading { margin-bottom: 1rem; }
   h1 { font-size: clamp(2.4rem, 8vw, 3.25rem); }
