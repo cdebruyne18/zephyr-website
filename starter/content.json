@@ -1,0 +1,84 @@
+{
+  "status": "Proposed local mockup content; not a live storefront",
+  "brand": {
+    "name": "Zephyr Archive",
+    "founders": [
+      "Chris DeBruyne",
+      "Paddy DeBruyne"
+    ],
+    "roots": "New England",
+    "headline": "For those that live between worlds.",
+    "tagline": "Deep Roots, Worn Everywhere",
+    "colors": {
+      "source": "Confirmed directly by the user",
+      "red": "#A24857",
+      "navy": "#3B4967",
+      "cream": "#EDE5D3"
+    },
+    "logoReference": "brand-reference/png/SERIF 2.png"
+  },
+  "release": {
+    "label": "November release",
+    "month": "November",
+    "year": null,
+    "exactDate": null,
+    "supportingCopy": "Hats and hoodies. Arriving November."
+  },
+  "categories": [
+    {
+      "id": "hats",
+      "label": "Hats",
+      "status": "Arriving November",
+      "image": null,
+      "imagePlaceholder": "Product photography to come",
+      "products": []
+    },
+    {
+      "id": "hoodies",
+      "label": "Hoodies",
+      "status": "Arriving November",
+      "image": null,
+      "imagePlaceholder": "Product photography to come",
+      "products": []
+    }
+  ],
+  "story": {
+    "copyStatus": "Proposed shortening of user-provided copy, not a quotation",
+    "heading": "Deep Roots, Worn Everywhere",
+    "paragraphs": [
+      "Founded by brothers Chris and Paddy DeBruyne, Zephyr Archive is rooted in New England and made for people who carry their culture with them, wherever life takes them.",
+      "For those who carry their culture, values and beliefs wherever they go."
+    ],
+    "attribution": "Chris & Paddy DeBruyne \u00b7 Founders"
+  },
+  "notificationDemo": {
+    "heading": "First to know.",
+    "body": "",
+    "button": "Notify me",
+    "notice": "Demo only \u2014 no email is sent or saved.",
+    "result": "Preview complete. No signup was sent or saved."
+  },
+  "productDetails": {
+    "names": null,
+    "prices": null,
+    "colors": null,
+    "sizes": null,
+    "materials": null,
+    "fit": null,
+    "photography": null
+  },
+  "contact": {
+    "email": null,
+    "instagram": null
+  },
+  "presentation": {
+    "background": "#FAF9F6",
+    "heading": "Drop One.",
+    "headerArtwork": "brand-reference/png/Z FOR ZEPHYR.png",
+    "motion": "Pausable CSS perspective rotation; still for reduced motion",
+    "layout": "Compact red banner, two side-by-side category previews, simple email signup, collapsed founders story with three lifestyle photos below, no footer",
+    "headerRoots": "Rooted in New England.",
+    "bannerBackground": "#A24857",
+    "bannerText": "#EDE5D3"
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.vercel/
+.env
+.env.*
+.DS_Store
+
+# Local tool settings and original artwork masters stay on this computer.
+.openai/
+brand-originals/

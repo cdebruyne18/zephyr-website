@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <meta name="description" content="Zephyr Archive. Drop One: hats and hoodies arriving November. Deep Roots, Worn Everywhere.">
+  <title>Zephyr Archive — Drop One</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=4">
+  <script src="script.js?v=2" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header page-width">
+    <p class="header-roots">Rooted in <span>New England.</span></p>
+    <div class="brand-center">
+      <button class="emblem-control" id="logo-motion" type="button" aria-label="Start logo rotation" title="Start logo rotation" disabled>
+        <span class="emblem-scene">
+          <span class="emblem-rotor" id="emblem-rotor">
+            <svg class="emblem-face emblem-front" viewBox="406 152 1173 1695" role="img" aria-label="Zephyr Archive Z and script logo">
+              <defs><filter id="navy-logo" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 .231373 0 0 0 0 .286275 0 0 0 0 .403922 0 0 0 1 0"/></filter></defs>
+              <g id="z-artwork"><image href="assets/z-for-zephyr-original.png" width="2000" height="2000" filter="url(#navy-logo)"/></g>
+            </svg>
+            <svg class="emblem-face emblem-back" viewBox="406 152 1173 1695" aria-hidden="true"><use href="#z-artwork"/></svg>
+          </span>
+        </span>
+        <span class="motion-symbol" aria-hidden="true" id="motion-symbol">▶</span>
+      </button>
+      <span class="sr-only">Zephyr Archive</span>
+    </div>
+    <nav class="nav-right" aria-label="Brand navigation"><a href="#story" id="story-link">Our story</a><a href="#stay-in-the-loop">Get notified</a></nav>
+  </header>
+  <main id="main">
+    <div class="brand-banner"><p>For those that live between worlds.</p></div>
+    <section class="release page-width" id="release" aria-labelledby="release-title">
+      <div class="release-heading">
+        <h1 id="release-title">Drop One<span>.</span></h1>
+        <div class="release-timing"><p>Arriving November</p><span>Hats &amp; hoodies</span></div>
+      </div>
+      <div class="product-grid">
+        <article class="product-preview" aria-labelledby="hats-title">
+          <!-- Replace this well with the actual hat photograph when supplied. -->
+          <div class="product-image-well"><span class="image-category" aria-hidden="true">Hats.</span><p class="photo-note">Product photography to come</p></div>
+          <div class="product-caption"><h2 id="hats-title">Hats</h2><p>Coming November</p></div>
+        </article>
+        <article class="product-preview" aria-labelledby="hoodies-title">
+          <!-- Replace this well with the actual hoodie photograph when supplied. -->
+          <div class="product-image-well product-image-well--alternate"><span class="image-category" aria-hidden="true">Hoodies.</span><p class="photo-note">Product photography to come</p></div>
+          <div class="product-caption"><h2 id="hoodies-title">Hoodies</h2><p>Coming November</p></div>
+        </article>
+      </div>
+    </section>
+    <section class="newsletter page-width" id="stay-in-the-loop" aria-labelledby="newsletter-title">
+      <h2 id="newsletter-title">First to know.</h2>
+      <form id="notification-form" action="#stay-in-the-loop" aria-describedby="demo-notice">
+        <label class="sr-only" for="email">Email address</label>
+        <div class="email-row"><input type="email" id="email" placeholder="Email address" autocomplete="email" autocapitalize="none" spellcheck="false" required aria-describedby="demo-notice signup-status"><button type="submit" id="notify-button" disabled>Notify me <span aria-hidden="true">→</span></button></div>
+        <p class="demo-notice" id="demo-notice">Demo only — no email is sent or saved.</p>
+        <p class="signup-status" id="signup-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript><p class="demo-notice">Turn on JavaScript to try this local form demo.</p></noscript>
+      </form>
+    </section>
+    <section class="story page-width" aria-label="About Zephyr Archive">
+      <details id="story">
+        <summary><span>Deep Roots, Worn Everywhere</span><span class="story-toggle">Our story <span class="expand-symbol" aria-hidden="true">+</span></span></summary>
+        <div class="story-copy">
+          <p>Zephyr Archive was founded by two brothers, Chris and Paddy DeBruyne, for the people that aren't defined by one world, but for those that live between them. Bred and brought up with roots in New England, we carried that culture throughout our lives no matter where we were.</p>
+          <p>It's for those that carry their culture, values and beliefs no matter where they are. Every piece is built with that person in mind. Substantial enough to last, understated enough to go anywhere.</p>
+          <p class="founders">— Chris &amp; Paddy DeBruyne</p>
+        </div>
+      </details>
+      <div class="roots-gallery" aria-label="Zephyr Archive, worn everywhere">
+        <img class="roots-fenway" src="assets/roots-fenway.jpg" alt="A red and white Zephyr cap in the stands at Fenway Park." width="1012" height="1800" loading="lazy" decoding="async">
+        <img class="roots-beach-sand" src="assets/roots-beach-sand.jpg" alt="A blue Zephyr cap resting on sandals in the sand, with ocean waves behind it." width="1200" height="1600" loading="lazy" decoding="async">
+        <img class="roots-beach-ocean" src="assets/roots-beach-ocean.jpg" alt="A blue Zephyr cap on a sand formation overlooking the beach." width="1200" height="1600" loading="lazy" decoding="async">
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,276 @@
+{
+  "sourceFolder": "PASSPORT GRAPHIC MASTER - Copy",
+  "inspection": "All 13 PNGs visually reviewed; native AI/PSD files inventoried, not layer-audited.",
+  "files": [
+    {
+      "name": "PASSPORT GRAPHIC MASTER - Copy.psd",
+      "bytes": 51018391,
+      "kind": "psd"
+    },
+    {
+      "name": "PASSPORT GRAPHIC MASTER.psd",
+      "bytes": 51018391,
+      "kind": "psd"
+    },
+    {
+      "name": "PASSPORTS GRAPHIC.ai",
+      "bytes": 9897890,
+      "kind": "ai"
+    },
+    {
+      "name": "PASSPORTS GRAPHIC.png",
+      "bytes": 5815987,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        0,
+        0,
+        2000,
+        2000
+      ],
+      "copiedTo": "brand-reference/png/PASSPORTS GRAPHIC.png"
+    },
+    {
+      "name": "SANS 1.ai",
+      "bytes": 1210539,
+      "kind": "ai"
+    },
+    {
+      "name": "SANS 1.png",
+      "bytes": 39289,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        324,
+        874,
+        1674,
+        1117
+      ],
+      "copiedTo": "brand-reference/png/SANS 1.png"
+    },
+    {
+      "name": "SANS 2.ai",
+      "bytes": 1288897,
+      "kind": "ai"
+    },
+    {
+      "name": "SANS 2.png",
+      "bytes": 42409,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        125,
+        876,
+        1872,
+        1115
+      ],
+      "copiedTo": "brand-reference/png/SANS 2.png"
+    },
+    {
+      "name": "SANS 3.ai",
+      "bytes": 1213691,
+      "kind": "ai"
+    },
+    {
+      "name": "SANS 3.png",
+      "bytes": 44245,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        560,
+        743,
+        1435,
+        1251
+      ],
+      "copiedTo": "brand-reference/png/SANS 3.png"
+    },
+    {
+      "name": "SCRIPT 1.ai",
+      "bytes": 3198667,
+      "kind": "ai"
+    },
+    {
+      "name": "SCRIPT 1.png",
+      "bytes": 671635,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        177,
+        391,
+        1823,
+        1610
+      ],
+      "copiedTo": "brand-reference/png/SCRIPT 1.png"
+    },
+    {
+      "name": "SCRIPT 2.ai",
+      "bytes": 1224270,
+      "kind": "ai"
+    },
+    {
+      "name": "SCRIPT 2.png",
+      "bytes": 90654,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        214,
+        419,
+        1789,
+        1581
+      ],
+      "copiedTo": "brand-reference/png/SCRIPT 2.png"
+    },
+    {
+      "name": "SCRIPT 3.ai",
+      "bytes": 1376257,
+      "kind": "ai"
+    },
+    {
+      "name": "SCRIPT 3.png",
+      "bytes": 95615,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        176,
+        419,
+        1759,
+        1581
+      ],
+      "copiedTo": "brand-reference/png/SCRIPT 3.png"
+    },
+    {
+      "name": "SERIF 1.ai",
+      "bytes": 1230002,
+      "kind": "ai"
+    },
+    {
+      "name": "SERIF 1.png",
+      "bytes": 59987,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        562,
+        733,
+        1435,
+        1179
+      ],
+      "copiedTo": "brand-reference/png/SERIF 1.png"
+    },
+    {
+      "name": "SERIF 2.ai",
+      "bytes": 1229882,
+      "kind": "ai"
+    },
+    {
+      "name": "SERIF 2.png",
+      "bytes": 53932,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        148,
+        870,
+        1846,
+        1126
+      ],
+      "copiedTo": "brand-reference/png/SERIF 2.png"
+    },
+    {
+      "name": "SERIF 3.ai",
+      "bytes": 1222720,
+      "kind": "ai"
+    },
+    {
+      "name": "SERIF 3.png",
+      "bytes": 49030,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        353,
+        870,
+        1636,
+        1126
+      ],
+      "copiedTo": "brand-reference/png/SERIF 3.png"
+    },
+    {
+      "name": "Z FOR ZEPHYR.ai",
+      "bytes": 1232520,
+      "kind": "ai"
+    },
+    {
+      "name": "Z FOR ZEPHYR.png",
+      "bytes": 101274,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        422,
+        168,
+        1563,
+        1831
+      ],
+      "copiedTo": "brand-reference/png/Z FOR ZEPHYR.png"
+    },
+    {
+      "name": "Z FOR ZEPHYR.psd",
+      "bytes": 1336940,
+      "kind": "psd"
+    },
+    {
+      "name": "ZEPHYR FINAL LOGO SET.png",
+      "bytes": 452378,
+      "kind": "png",
+      "width": 4000,
+      "height": 3000,
+      "mode": "RGB",
+      "alphaBounds": [
+        0,
+        0,
+        4000,
+        3000
+      ],
+      "copiedTo": "brand-reference/png/ZEPHYR FINAL LOGO SET.png"
+    },
+    {
+      "name": "ZEPHYR STAMP GRAPHIC.png",
+      "bytes": 574119,
+      "kind": "png",
+      "width": 2000,
+      "height": 2000,
+      "mode": "RGBA",
+      "alphaBounds": [
+        484,
+        579,
+        1837,
+        1490
+      ],
+      "copiedTo": "brand-reference/png/ZEPHYR STAMP GRAPHIC.png"
+    },
+    {
+      "name": "ZEPHYR STAMP.ai",
+      "bytes": 1995308,
+      "kind": "ai"
+    }
+  ]
+}
