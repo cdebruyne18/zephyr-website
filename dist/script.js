@@ -23,10 +23,9 @@ if (form && email && button && status) {
 // The original flat artwork rotates in CSS perspective; it is not a 3D mesh.
 const motionButton = document.querySelector('#logo-motion');
 const rotor = document.querySelector('#emblem-rotor');
-const motionSymbol = document.querySelector('#motion-symbol');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-if (motionButton && rotor && motionSymbol) {
+if (motionButton && rotor) {
   let paused = reducedMotion.matches;
 
   function updateMotion() {
@@ -37,8 +36,6 @@ if (motionButton && rotor && motionSymbol) {
     const label = reducedMotion.matches ? 'Logo rotation off — reduced motion enabled' : stopped ? 'Start logo rotation' : 'Pause logo rotation';
     motionButton.setAttribute('aria-label', label);
     motionButton.title = label;
-    motionSymbol.textContent = stopped ? '▶' : 'Ⅱ';
-    motionSymbol.hidden = reducedMotion.matches;
   }
 
   motionButton.addEventListener('click', () => {

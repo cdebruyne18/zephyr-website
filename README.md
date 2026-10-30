@@ -22,7 +22,7 @@ Keep that terminal running while you work. Stop it with Control+C. If port 5173 
 
 - Header links open the story and jump to the notification form.
 - The page uses #FAF9F6 for a hint of cream, navy text, and restrained red accents. The original cream remains a brand color.
-- The original Z artwork is centered in the header, with a slow CSS perspective rotation. Click the mark to pause or resume. Reduced-motion preferences keep it still. This is a rotating flat graphic, not a modeled 3D object.
+- The original Z artwork is centered in the header, with a continuous CSS perspective rotation at a constant speed (one full turn every 14 seconds). Click the mark to pause or resume. Reduced-motion preferences keep it still. This is a rotating flat graphic, not a modeled 3D object.
 - Drop One and both product categories lead the page; the lengthy hero is removed. The story is collapsed by default and can be opened from the header or its own disclosure.
 - “Rooted in New England.” sits at the top left; the bottom footer is removed. The brand banner uses red #A24857 with cream #EDE5D3 lettering.
 - “First to know.” is a simple email row. The Deep Roots section includes the three supplied Fenway and beach photographs in a compact strip.
