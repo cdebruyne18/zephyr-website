@@ -11,3 +11,11 @@
 - `lifestyle-harbor.jpg`: 1400×1750 JPEG (quality 82) resized from a 4640×5800 photo the user supplied in chat on 2026-10-30 (standing above the harbor).
 - These two photos lead the page directly under the red brand banner. They were resized only; keep the full-resolution originals outside this folder.
 - `hat-blue.jpg` and `hat-white-red.jpg`: 1200×1600 JPEGs (quality 88) made from 1890×1417 front-view hat photos the user supplied in chat on 2026-10-30. Each hat was trimmed, scaled to the same width (74% of the canvas), and centered; the white background was multiplied onto the tile tone #F0EFEB, with a 6% contrast lift. The white-and-red hat was smaller in its source photo, so it was enlarged about 1.5× and is slightly softer than the blue one. Keep the full-resolution originals outside this folder.
+- Hat 02 gallery (`hat-02.html`), all from photos the user supplied in chat on 2026-10-30:
+  - `hat-white-red-side.jpg`: 1200×1600 (quality 88) from a 1890×1417 side-view product photo, processed like the front shot (trimmed, centered, background multiplied onto #F0EFEB, 6% contrast). The side profile is scaled to 84% of the canvas width so its height stays below the front shot's.
+  - `hat-white-red-traps.jpg`: 1200×1500 (quality 85), the full 4316×5395 lobster-traps photo resized.
+  - `hat-white-red-pub.jpg`: 1200×1500 (quality 85), a 4:5 crop (rows 700–6500) of a 4640×6960 pub photo.
+  - `hat-white-red-beach.jpg`: 1200×1500 (quality 85), a 4:5 crop (bottom 5800 rows) of a 4640×6960 beach photo.
+- Hat 01 gallery (`hat-01.html`), all from photos the user supplied in chat on 2026-10-30:
+  - `hat-blue-side.jpg`: 1200×1600 (quality 88) from a 1890×1417 side-view product photo, processed like the front shot and scaled to 84% of the canvas width, matching `hat-white-red-side.jpg`.
+  - `hat-blue-harbor.jpg`, `hat-blue-street.jpg`, `hat-blue-surf.jpg`: 1200×1500 (quality 85), full-height 4:5 crops (3712×4640, starting at x = 1312, 1346, and 2147) of 6960×4640 photos, framed on the subject.

@@ -121,7 +121,7 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
   show(0);
 });
 
-// Cart is a placeholder until a cart page exists.
-document.querySelector('[data-cart-placeholder]')?.addEventListener('click', (event) => {
-  event.preventDefault();
+// Cart and footer links are placeholders until their pages exist.
+document.querySelectorAll('[data-placeholder-link]').forEach((link) => {
+  link.addEventListener('click', (event) => event.preventDefault());
 });

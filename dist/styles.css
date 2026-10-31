@@ -67,7 +67,8 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .back-link:hover { text-decoration: underline; }
 .product-layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; }
 .gallery-stage { position: relative; background: #f0efeb; }
-.gallery.is-ready .gallery-stage { width: 100%; aspect-ratio: 4 / 5; max-height: max(26rem, calc(100vh - 22rem)); overflow: hidden; }
+.gallery.is-ready .gallery-stage { width: 100%; aspect-ratio: 4 / 5; overflow: hidden; }
+@media (min-width: 701px) { .product-layout { grid-template-columns: minmax(0, max(24rem, calc((100vh - 20rem) * .8))) minmax(16rem, 28rem); } }
 .gallery-slide { margin: 0; }
 .gallery.is-ready .gallery-slide { position: absolute; inset: 0; }
 .gallery-slide[hidden] { display: none; }
@@ -116,6 +117,10 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .story-copy { max-width: 47rem; padding-block: .5rem 1.5rem; }
 .story-copy p { margin-bottom: 1rem; line-height: 1.8; }
 .story-copy .founders { font-family: var(--serif); margin-bottom: 0; }
+.site-footer { border-top: 1px solid var(--rule); padding-block: 1.5rem 2.5rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin: 0; padding: 0; list-style: none; font-size: .8125rem; }
+.footer-links a { display: inline-block; padding-block: .3rem; color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--navy); text-decoration: underline; }
 @keyframes logo-turn { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
 @media (max-width: 700px) {
   .site-header { grid-template-columns: 1fr 6rem 1fr; min-height: 130px; }
@@ -149,6 +154,8 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
   .story summary { gap: 1rem; }
   .story summary > span:first-child { max-width: 12rem; font-size: 1rem; }
   .story-toggle { gap: .5rem; font-size: .8125rem; }
+  .site-footer { padding-block: 1.1rem 2rem; }
+  .footer-links { gap: .25rem 1.25rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
