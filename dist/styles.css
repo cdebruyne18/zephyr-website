@@ -29,10 +29,12 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .skip-link { position: absolute; top: 1rem; left: 1rem; z-index: 5; padding: .75rem 1rem; background: var(--navy); color: var(--paper); transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
 .site-header { display: grid; grid-template-columns: 1fr 9rem 1fr; align-items: center; min-height: 158px; padding-block: .65rem; }
-.site-header nav { display: flex; gap: 1.75rem; font-size: .875rem; }
+.site-header nav { display: flex; align-items: center; gap: 1.75rem; font-size: .875rem; }
 .site-header nav a { padding-block: .6rem; text-decoration: none; }
 .site-header nav a:hover { text-decoration: underline; }
 .nav-right { justify-content: flex-end; }
+.cart-link { display: inline-flex; padding: .35rem; margin-right: -.35rem; }
+.cart-link:hover { color: var(--red); }
 .brand-center { justify-self: center; }
 .emblem-control { display: block; position: relative; padding: .2rem .8rem; background: none; border: 0; color: var(--navy); }
 .emblem-scene { display: block; perspective: 650px; width: 86px; height: 124px; }
@@ -57,6 +59,41 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .product-caption { padding-top: .9rem; }
 .product-caption h2 { font: 400 1.125rem/1.4 var(--sans); }
 .product-price { margin-top: .2rem; font: .875rem/1.4 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .08em; }
+.product-link { display: block; text-decoration: none; }
+.product-link:hover .product-caption h2 { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .3em; }
+/* Product pages: photo gallery beside name and price. */
+.product-page { padding-block: 1.25rem 3.5rem; }
+.back-link { display: inline-block; margin-bottom: 1.25rem; padding-block: .3rem; font-size: .875rem; text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+.product-layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: start; }
+.gallery-stage { position: relative; background: #f0efeb; }
+.gallery.is-ready .gallery-stage { width: 100%; aspect-ratio: 4 / 5; max-height: max(26rem, calc(100vh - 22rem)); overflow: hidden; }
+.gallery-slide { margin: 0; }
+.gallery.is-ready .gallery-slide { position: absolute; inset: 0; }
+.gallery-slide[hidden] { display: none; }
+.gallery-slide img { width: 100%; height: auto; }
+.gallery.is-ready .gallery-slide img { height: 100%; object-fit: contain; }
+.gallery-slide--placeholder { display: flex; align-items: center; justify-content: center; min-height: 12rem; font-size: .875rem; color: var(--muted); }
+.gallery-arrow { position: absolute; top: 50%; display: flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; transform: translateY(-50%); border: 0; border-radius: 50%; background: rgba(255, 255, 255, .85); color: var(--navy); }
+.gallery-arrow[hidden] { display: none; }
+.gallery-arrow:hover { background: #fff; color: var(--red); }
+.gallery-arrow--prev { left: .75rem; }
+.gallery-arrow--next { right: .75rem; }
+.gallery-count { position: absolute; bottom: .75rem; left: 50%; transform: translateX(-50%); padding: .3rem .6rem; background: #fff; font: .75rem/1.2 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .08em; }
+.gallery-count:empty { display: none; }
+.gallery-thumbs { display: grid; grid-template-columns: repeat(5, minmax(0, 5rem)); gap: .5rem; margin-top: .5rem; }
+.gallery-thumbs:empty, .gallery-thumbs[hidden] { display: none; }
+.gallery-thumb { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; padding: 0; overflow: hidden; border: 1px solid transparent; background: #f0efeb; color: var(--muted); font-size: .75rem; opacity: .7; }
+.gallery-thumb img { width: 100%; height: 100%; object-fit: contain; }
+.gallery-thumb:hover { opacity: 1; }
+.gallery-thumb[aria-current="true"] { border-color: var(--navy); opacity: 1; }
+.product-info { position: sticky; top: 1.5rem; }
+.product-kicker { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.product-name { margin-top: .4rem; font: 400 clamp(1.75rem, 3vw, 2.5rem)/1.15 var(--sans); letter-spacing: .01em; }
+.product-info .product-price { margin-top: .6rem; font-size: 1rem; }
+.product-availability { margin-top: 1.5rem; font-size: .875rem; color: var(--red); }
+.product-cta { display: block; margin-top: .75rem; padding: .9rem 1rem; background: var(--navy); color: var(--paper); font-size: .875rem; letter-spacing: .06em; text-align: center; text-decoration: none; text-transform: uppercase; }
+.product-cta:hover { background: var(--red); }
 .newsletter { display: grid; grid-template-columns: 1fr 1.25fr; align-items: start; gap: 2.5rem; border-top: 1px solid var(--rule); padding-block: 1rem; }
 .newsletter h2 { font: 400 1rem/1.6 var(--sans); padding-block: .55rem; }
 .email-row { display: flex; gap: .75rem; border-bottom: 1px solid var(--rule); }
@@ -85,8 +122,8 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
   .site-header nav { font-size: .875rem; }
   .site-header nav { flex-direction: column; gap: 0; }
   .site-header nav a { padding-block: .3rem; }
-  .nav-left { align-items: flex-start; }
-  .nav-right { align-items: flex-end; }
+  .site-header .nav-left { align-items: flex-start; }
+  .site-header .nav-right { align-items: flex-end; }
   .emblem-scene { width: 67px; height: 97px; }
   .brand-banner p { font-size: 1rem; }
   .lifestyle { gap: 2px; }
@@ -97,6 +134,13 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
   .product-caption { padding-top: .55rem; }
   .product-caption h2 { font-size: 1rem; }
   .product-price { font-size: .8125rem; }
+  .product-page { padding-block: .75rem 2.5rem; }
+  .back-link { margin-bottom: .75rem; }
+  .product-layout { grid-template-columns: 1fr; gap: 1.25rem; }
+  .gallery-arrow { width: 2.25rem; height: 2.25rem; }
+  .gallery-thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .35rem; }
+  .product-info { position: static; }
+  .product-name { font-size: 1.625rem; }
   .newsletter { grid-template-columns: 1fr; gap: .3rem; padding-block: .9rem; }
   .newsletter h2 { font-size: .9375rem; padding: 0; }
   .email-row { gap: .65rem; }

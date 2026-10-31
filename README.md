@@ -6,7 +6,7 @@ The website mockup is built in `dist/` using plain HTML, CSS, and JavaScript. Th
 
 1. Open this entire `Zephyr Archive` folder in Downloads in Visual Studio Code. You can also open `zephyr-archive.code-workspace`.
 2. View the running preview at **http://127.0.0.1:5173/**.
-3. Edit `dist/index.html` for page content, `dist/styles.css` for appearance, and `dist/script.js` for the demo form behavior. Save and refresh your browser to see changes.
+3. Edit `dist/index.html` for the home page, `dist/hat-01.html` and `dist/hat-02.html` for the two hat pages, `dist/styles.css` for appearance, and `dist/script.js` for the demo form and the photo gallery. Save and refresh your browser to see changes.
 
 No package installation or build step is needed. You can also open `dist/index.html` directly in a browser.
 
@@ -20,7 +20,8 @@ Keep that terminal running while you work. Stop it with Control+C. If port 5173 
 
 ## Current behavior and remaining inputs
 
-- The header has Shop and About on the left and Our story and Get notified on the right. Shop jumps to the Founders Drop and About opens the story for now; both will later point to their own pages.
+- The header has Shop and About on the left, and Get notified plus a cart icon on the right. Shop jumps to the Founders Drop and About opens the story for now; both will later point to their own pages. The cart icon is a placeholder link that does nothing yet.
+- Each Founders Drop tile links to its own page (`hat-01.html`, `hat-02.html`) with the shared header and banner, a 5-slot photo gallery (arrows, thumbnails, keyboard arrows, and swipe on touch screens), the name, $38, “Coming November,” and a Get notified button that returns to the home page signup. Slot 1 is the product photo; slots 2–5 say “Photo N to come.” To add a photo, replace a placeholder `<figure class="gallery-slide">` with one containing an `<img>`; thumbnails and the counter update automatically. No Shopify, cart, or checkout is connected.
 - The page uses #FAF9F6 for a hint of cream, navy text, and restrained red accents. The original cream remains a brand color.
 - The original Z artwork is centered in the header, with a continuous CSS perspective rotation at a constant speed (one full turn every 14 seconds). Click the mark to pause or resume. Reduced-motion preferences keep it still. This is a rotating flat graphic, not a modeled 3D object.
 - Two full-width lifestyle photos (a from-behind waterfront shot with a canvas tote, and the harbor) sit side by side directly under the red brand banner, so they are the first thing visitors see. The Founders Drop follows with two equal product columns at every screen size, filling the viewport width inside the page's side margins. Its two hat tiles (“Hat 01” and “Hat 02”, placeholder names) use the user-supplied price of $38 each; the old passport hero is still gone. The story is collapsed by default and can be opened from the header or its own disclosure.
