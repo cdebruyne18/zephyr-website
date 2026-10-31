@@ -40,11 +40,11 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .shopify-buy-frame--toggle { display: none !important; }
 .cart-link:hover { color: var(--red); }
 .brand-center { justify-self: center; }
-.emblem-control { display: block; position: relative; padding: .2rem .8rem; background: none; border: 0; color: var(--navy); }
+.emblem-control { display: block; position: relative; padding: .2rem .8rem; color: var(--navy); }
 .emblem-scene { display: block; perspective: 650px; width: 86px; height: 124px; }
 .emblem-rotor { display: block; position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateY(0deg); }
 .emblem-rotor.is-animated { animation: logo-turn 14s linear infinite; }
-.emblem-rotor.is-paused { animation-play-state: paused; }
+.emblem-control:hover .emblem-rotor, .emblem-control:focus-visible .emblem-rotor { animation-play-state: paused; }
 .emblem-face { position: absolute; inset: 0; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .emblem-front { transform: translateZ(1px); }
 .emblem-back { transform: rotateY(180deg) translateZ(1px); }
@@ -150,6 +150,8 @@ html.has-lightbox { overflow: hidden; }
 .about-lede { margin-top: .75rem; font: italic 1.125rem/1.5 var(--serif); color: var(--red); }
 .about-copy p:not(.product-kicker):not(.about-lede) { margin-top: 1.25rem; line-height: 1.8; }
 .about-copy .founders { font-family: var(--serif); }
+.about-places { margin: 1.75rem 0 0; padding: .15rem 0 .15rem 1.1rem; border-left: 2px solid var(--red); list-style: none; }
+.about-places li { font: italic 1.25rem/1.65 var(--serif); }
 .about-shop { display: inline-block; margin-top: 2rem; padding-block: .3rem; font-size: .875rem; text-decoration: none; border-bottom: 1px solid currentColor; }
 .about-shop:hover { color: var(--red); }
 .about-shop span { margin-left: .5rem; }

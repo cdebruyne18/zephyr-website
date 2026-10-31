@@ -7,8 +7,8 @@
   <meta name="description" content="Zephyr Archive was founded by two brothers with roots in New England. Deep Roots, Worn Everywhere.">
   <title>About — Zephyr Archive</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=34">
-  <script src="script.js?v=9" defer></script>
+  <link rel="stylesheet" href="styles.css?v=36">
+  <script src="script.js?v=10" defer></script>
   <script src="shop.js?v=4" defer></script>
 </head>
 <body id="top">
@@ -16,7 +16,7 @@
   <header class="site-header page-width">
     <nav class="nav-left" aria-label="Site navigation"><a href="index.html#release">Shop</a><a href="about.html" aria-current="page">About</a></nav>
     <div class="brand-center">
-      <button class="emblem-control" id="logo-motion" type="button" aria-label="Start logo rotation" title="Start logo rotation" disabled>
+      <a class="emblem-control" id="logo-motion" href="index.html" aria-label="Zephyr Archive home" title="Zephyr Archive home">
         <span class="emblem-scene">
           <span class="emblem-rotor" id="emblem-rotor">
             <svg class="emblem-face emblem-front" viewBox="406 152 1173 1695" role="img" aria-label="Zephyr Archive Z and script logo">
@@ -26,7 +26,7 @@
             <svg class="emblem-face emblem-back" viewBox="406 152 1173 1695" aria-hidden="true"><use href="#z-artwork"/></svg>
           </span>
         </span>
-      </button>
+      </a>
       <span class="sr-only">Zephyr Archive</span>
     </div>
     <!-- The cart icon opens the shared Shopify cart (shop.js); data-cart-count shows the item count. -->
@@ -34,7 +34,7 @@
   </header>
   <main id="main">
     <div class="brand-banner"><p>For those that live between worlds.</p></div>
-    <!-- Story copy is the brand text the user supplied (SOURCE-COPY.md), unchanged. -->
+    <!-- Story copy is the brand text the user supplied (SOURCE-COPY.md), unchanged, plus the Worn Everywhere passage below. -->
     <article class="about-page page-width" aria-labelledby="about-title">
       <figure class="about-photo"><img src="assets/about-harbor.jpg" alt="Lobster boats tied up along a weathered wharf in a New England harbor, with fall color on the far shore." width="1200" height="1500" decoding="async"></figure>
       <div class="about-copy">
@@ -43,6 +43,14 @@
         <p class="about-lede">For those that live between worlds.</p>
         <p>Zephyr Archive was founded by two brothers, Chris and Paddy DeBruyne, for the people that aren’t defined by one world, but for those that live between them. Bred and brought up with roots in New England, we carried that culture throughout our lives no matter where we were.</p>
         <p>Deep Roots, Worn Everywhere goes beyond just clothing. It’s for those that carry their culture, values and beliefs no matter where they are. Every piece is built with that person in mind. Substantial enough to last, understated enough to go anywhere.</p>
+        <!-- Worn Everywhere passage: drafted with the user (Option B), not part of the original supplied copy. -->
+        <ul class="about-places" aria-label="Where it's worn">
+          <li>Fenway on a summer night.</li>
+          <li>A dawn session on the California coast.</li>
+          <li>Fresh snow in the Uintas.</li>
+          <li>A night out in the city.</li>
+        </ul>
+        <p>Zephyr Archive isn’t made for one place. It’s made for all of them. Deep roots, worn <strong>everywhere</strong>.</p>
         <p class="founders">— Chris &amp; Paddy DeBruyne</p>
         <a class="about-shop" href="index.html#release">Shop the Founders Drop <span aria-hidden="true">→</span></a>
       </div>
