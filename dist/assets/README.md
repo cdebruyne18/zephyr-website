@@ -19,3 +19,6 @@
 - Hat 01 gallery (`hat-01.html`), all from photos the user supplied in chat on 2026-10-30:
   - `hat-blue-side.jpg`: 1200×1600 (quality 88) from a 1890×1417 side-view product photo, processed like the front shot and scaled to 84% of the canvas width, matching `hat-white-red-side.jpg`.
   - `hat-blue-harbor.jpg`, `hat-blue-street.jpg`, `hat-blue-surf.jpg`: 1200×1500 (quality 85), full-height 4:5 crops (3712×4640, starting at x = 1312, 1346, and 2147) of 6960×4640 photos, framed on the subject.
+- Three-quarter product shots (gallery photo 2), from 1890×1417 photos the user supplied in chat on 2026-10-30, processed like the other product shots and fitted inside the shared product box (at most 1008 px wide and 712 px tall on the 1200×1600 canvas):
+  - `hat-blue-angle.jpg`: before processing, a patch of white mesh texture and purple specks under the back of the crown (source x 405–570, y 880–990) was painted to background with a 2 px feathered edge.
+  - `hat-white-red-angle.jpg`: no retouching.
