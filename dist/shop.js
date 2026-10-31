@@ -1,6 +1,17 @@
 // Shopify Buy Button: a Buy now button on each hat page and one shared cart, opened from the header cart icon.
 // The storefront access token is Shopify's public, read-only key for the Buy Button sales channel.
 (function () {
+  // Sales are paused until Shopify Payments is connected: Buy now becomes Get notified, the cart icon is hidden,
+  // and the Buy Button SDK is not loaded. Set to false to turn sales back on.
+  const SALES_PAUSED = true;
+  if (SALES_PAUSED) {
+    document.documentElement.classList.add('sales-paused');
+    document.querySelectorAll('.product-buy').forEach((mount) => {
+      mount.innerHTML = '<a class="product-cta" href="index.html#stay-in-the-loop">Get notified</a>';
+    });
+    return;
+  }
+
   const SHOP = {
     domain: '6jwzsw-z6.myshopify.com',
     storefrontAccessToken: '7abe7bd8b798d62a907f0c1d5015c142',

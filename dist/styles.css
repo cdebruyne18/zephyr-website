@@ -39,6 +39,8 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 /* Shopify's floating cart tab is replaced by the header cart icon. */
 .shopify-buy-frame--toggle { display: none !important; }
 .cart-link:hover { color: var(--red); }
+/* While sales are paused (shop.js), there is no cart to open. */
+.sales-paused .cart-link { display: none; }
 .brand-center { justify-self: center; }
 .emblem-control { display: block; position: relative; padding: .2rem .8rem; color: var(--navy); }
 .emblem-scene { display: block; perspective: 650px; width: 86px; height: 124px; }
