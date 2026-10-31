@@ -128,6 +128,74 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
 
   gallery.classList.add('is-ready');
   show(0);
+
+  // Full-screen viewer: click the photo (or the expand button) to see it larger and step through the same photos.
+  const images = slides.map((slide) => slide.querySelector('img'));
+  if (!images.some(Boolean) || typeof HTMLDialogElement !== 'function') return;
+
+  const chevron = (d) => `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${d}"/></svg>`;
+  const viewer = document.createElement('dialog');
+  viewer.className = 'lightbox';
+  viewer.setAttribute('aria-label', gallery.getAttribute('aria-label') || 'Photos');
+  viewer.innerHTML = `
+    <figure class="lightbox-figure"><img class="lightbox-image" alt=""></figure>
+    <button class="lightbox-close" type="button" aria-label="Close">${chevron('M6 6l12 12M18 6L6 18')}</button>
+    <button class="gallery-arrow gallery-arrow--prev lightbox-arrow" type="button" aria-label="Previous photo">${chevron('M15 5l-7 7 7 7')}</button>
+    <button class="gallery-arrow gallery-arrow--next lightbox-arrow" type="button" aria-label="Next photo">${chevron('M9 5l7 7-7 7')}</button>
+    <p class="gallery-count lightbox-count" aria-live="polite"></p>`;
+  document.body.append(viewer);
+  const big = viewer.querySelector('.lightbox-image');
+  const bigCount = viewer.querySelector('.lightbox-count');
+  viewer.querySelectorAll('.lightbox-arrow').forEach((arrow) => { arrow.hidden = slides.length < 2; });
+
+  function render() {
+    const image = images[current];
+    big.src = image.getAttribute('src');
+    big.alt = image.alt;
+    bigCount.textContent = `${current + 1} / ${slides.length}`;
+  }
+  // Moves the gallery too, skipping any slide that has no photo yet.
+  function step(direction) {
+    let index = current;
+    do { index = (index + direction + slides.length) % slides.length; } while (!images[index] && index !== current);
+    show(index);
+    render();
+  }
+  function open() {
+    if (!images[current]) return;
+    render();
+    document.documentElement.classList.add('has-lightbox');
+    viewer.showModal();
+  }
+
+  const expand = document.createElement('button');
+  expand.type = 'button';
+  expand.className = 'gallery-expand';
+  expand.setAttribute('aria-label', 'View photo larger');
+  expand.innerHTML = chevron('M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7');
+  stage.append(expand);
+  expand.addEventListener('click', open);
+  stage.addEventListener('click', (event) => { if (event.target.closest('.gallery-slide img')) open(); });
+
+  viewer.querySelector('.lightbox-close').addEventListener('click', () => viewer.close());
+  viewer.querySelector('.gallery-arrow--prev').addEventListener('click', () => step(-1));
+  viewer.querySelector('.gallery-arrow--next').addEventListener('click', () => step(1));
+  // Clicking the empty area around the photo closes the viewer.
+  viewer.addEventListener('click', (event) => { if (event.target === viewer || event.target.classList.contains('lightbox-figure')) viewer.close(); });
+  viewer.addEventListener('keydown', (event) => {
+    if (slides.length < 2) return;
+    if (event.key === 'ArrowLeft') step(-1);
+    if (event.key === 'ArrowRight') step(1);
+  });
+  viewer.addEventListener('close', () => document.documentElement.classList.remove('has-lightbox'));
+  let viewerStartX = null;
+  viewer.addEventListener('touchstart', (event) => { viewerStartX = event.touches[0].clientX; }, { passive: true });
+  viewer.addEventListener('touchend', (event) => {
+    if (viewerStartX === null || slides.length < 2) return;
+    const distance = event.changedTouches[0].clientX - viewerStartX;
+    viewerStartX = null;
+    if (Math.abs(distance) > 40) step(distance < 0 ? 1 : -1);
+  });
 });
 
 // Footer links are placeholders until their pages exist.
