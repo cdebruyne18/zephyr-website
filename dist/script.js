@@ -1,18 +1,27 @@
-// Local interaction demo: no service, network request, or persistent storage.
+// Email signup: sends the form to Shopify in the background, the same way the store's own signup works, so
+// subscribers land in Shopify's customer list. Shopify's reply can't be read from another site, so a completed
+// request is treated as success.
 const form = document.querySelector('#notification-form');
 const email = document.querySelector('#email');
 const button = document.querySelector('#notify-button');
 const status = document.querySelector('#signup-status');
 
 if (form && email && button && status) {
-  button.disabled = false;
-
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
     if (!form.reportValidity()) return;
 
-    email.value = '';
-    status.textContent = 'Preview complete. No signup was sent or saved.';
+    button.disabled = true;
+    status.textContent = 'Signing you up…';
+    try {
+      await fetch(form.action, { method: 'POST', mode: 'no-cors', body: new URLSearchParams(new FormData(form)) });
+      form.reset();
+      status.textContent = 'You’re on the list. We’ll email you when the Founders Drop goes live.';
+    } catch {
+      status.textContent = 'Something went wrong. Please try again.';
+    } finally {
+      button.disabled = false;
+    }
   });
 
   email.addEventListener('input', () => {

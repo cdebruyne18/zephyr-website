@@ -96,6 +96,7 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .product-kicker { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .product-name { margin-top: .4rem; font: 400 clamp(1.75rem, 3vw, 2.5rem)/1.15 var(--sans); letter-spacing: .01em; }
 .product-info .product-price { margin-top: .6rem; font-size: 1rem; }
+.product-description { max-width: 28rem; margin-top: 1.25rem; line-height: 1.7; }
 .product-availability { margin-top: 1.5rem; font-size: .875rem; color: var(--red); }
 .product-buy { margin-top: .75rem; }
 .product-buy .shopify-buy-frame, .product-buy iframe { width: 100% !important; max-width: 100% !important; }
@@ -110,7 +111,8 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .email-row button span { margin-left: .8rem; }
 .email-row button:hover:not(:disabled) { color: var(--red); }
 .email-row button:disabled { opacity: .55; }
-.demo-notice { margin-top: .5rem; font-size: .75rem; color: var(--muted); }
+.signup-consent { margin-top: .5rem; font-size: .75rem; color: var(--muted); }
+.signup-consent a { color: inherit; }
 .signup-status { margin-top: .4rem; font-size: .875rem; }
 .signup-status:empty { margin: 0; }
 .story { border-top: 1px solid var(--rule); padding-bottom: 1.25rem; }

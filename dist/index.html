@@ -7,8 +7,8 @@
   <meta name="description" content="Zephyr Archive. Founders Drop: two hats arriving November. Deep Roots, Worn Everywhere.">
   <title>Zephyr Archive — Founders Drop</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=31">
-  <script src="script.js?v=7" defer></script>
+  <link rel="stylesheet" href="styles.css?v=33">
+  <script src="script.js?v=8" defer></script>
   <script src="shop.js?v=4" defer></script>
 </head>
 <body id="top">
@@ -60,12 +60,16 @@
     </section>
     <section class="newsletter page-width" id="stay-in-the-loop" aria-labelledby="newsletter-title">
       <h2 id="newsletter-title">First to know.</h2>
-      <form id="notification-form" action="#stay-in-the-loop" aria-describedby="demo-notice">
+      <!-- Same list as the Shopify store's own signup: a Shopify customer subscribed to email marketing, tagged
+           newsletter and prelaunch-2026. script.js submits it in the background; without JavaScript it posts to Shopify. -->
+      <form id="notification-form" action="https://6jwzsw-z6.myshopify.com/contact" method="post" accept-charset="UTF-8" aria-describedby="signup-consent">
+        <input type="hidden" name="form_type" value="customer">
+        <input type="hidden" name="utf8" value="&#10003;">
+        <input type="hidden" name="contact[tags]" value="newsletter,prelaunch-2026">
         <label class="sr-only" for="email">Email address</label>
-        <div class="email-row"><input type="email" id="email" placeholder="Email address" autocomplete="email" autocapitalize="none" spellcheck="false" required aria-describedby="demo-notice signup-status"><button type="submit" id="notify-button" disabled>Notify me <span aria-hidden="true">→</span></button></div>
-        <p class="demo-notice" id="demo-notice">Demo only — no email is sent or saved.</p>
+        <div class="email-row"><input type="email" id="email" name="contact[email]" placeholder="Email address" autocomplete="email" autocapitalize="none" spellcheck="false" required aria-describedby="signup-consent signup-status"><button type="submit" id="notify-button">Notify me <span aria-hidden="true">→</span></button></div>
+        <p class="signup-consent" id="signup-consent">By signing up, you agree to receive emails from Zephyr Archive. Unsubscribe anytime. <a href="privacy-policy.html">Privacy Policy</a>.</p>
         <p class="signup-status" id="signup-status" role="status" aria-live="polite" aria-atomic="true"></p>
-        <noscript><p class="demo-notice">Turn on JavaScript to try this local form demo.</p></noscript>
       </form>
     </section>
     <section class="story page-width" aria-label="About Zephyr Archive">
