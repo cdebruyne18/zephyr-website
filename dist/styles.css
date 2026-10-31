@@ -48,12 +48,11 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .lifestyle img { width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 92vh; object-fit: cover; background: #f0efeb; }
 .lifestyle .lifestyle-traps { object-position: 50% 30%; }
 .lifestyle .lifestyle-harbor { object-position: 50% 25%; }
-.release { padding-block: 2.5rem 2.75rem; }
+.release { width: calc(100% - var(--gutter) * 2); padding-block: 2.5rem 2.75rem; }
 .release-title { margin-bottom: 1.75rem; font: 400 clamp(1.5rem, 2.4vw, 1.875rem)/1.2 var(--sans); letter-spacing: .02em; text-transform: uppercase; }
 .product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
-@media (min-width: 1000px) { .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.product-image-well { position: relative; background: #f0efeb; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.product-image-well img { width: 100%; height: 100%; object-fit: cover; }
+.product-image-well { position: relative; background: #f0efeb; height: clamp(180px, 30vw, 380px); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.product-image-well img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .product-badge { position: absolute; top: .75rem; right: .75rem; padding: .45rem .7rem; background: #fff; font: .75rem/1.2 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
 .product-caption { padding-top: .9rem; }
 .product-caption h2 { font: 400 1.125rem/1.4 var(--sans); }
