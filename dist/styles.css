@@ -29,7 +29,6 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .skip-link { position: absolute; top: 1rem; left: 1rem; z-index: 5; padding: .75rem 1rem; background: var(--navy); color: var(--paper); transform: translateY(-200%); }
 .skip-link:focus { transform: translateY(0); }
 .site-header { display: grid; grid-template-columns: 1fr 9rem 1fr; align-items: center; min-height: 158px; padding-block: .65rem; }
-.header-roots { font-size: .875rem; line-height: 1.6; }
 .site-header nav { display: flex; gap: 1.75rem; font-size: .875rem; }
 .site-header nav a { padding-block: .6rem; text-decoration: none; }
 .site-header nav a:hover { text-decoration: underline; }
@@ -49,21 +48,16 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .lifestyle img { width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 92vh; object-fit: cover; background: #f0efeb; }
 .lifestyle .lifestyle-traps { object-position: 50% 30%; }
 .lifestyle .lifestyle-harbor { object-position: 50% 25%; }
-.release { padding-block: 1.65rem 2rem; }
-.release-heading { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; margin-bottom: 1.4rem; }
-h1 { font-size: clamp(2.75rem, 5vw, 4.25rem); line-height: 1.1; letter-spacing: -.045em; }
-h1 > span { color: var(--red); }
-.release-timing { text-align: right; font-size: .875rem; }
-.release-timing p { color: var(--red); }
-.release-timing span { display: block; margin-top: .15rem; font-size: .75rem; color: var(--muted); }
+.release { padding-block: 2.5rem 2.75rem; }
+.release-title { margin-bottom: 1.75rem; font: 400 clamp(1.5rem, 2.4vw, 1.875rem)/1.2 var(--sans); letter-spacing: .02em; text-transform: uppercase; }
 .product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
-.product-image-well { position: relative; background: #f0efeb; height: clamp(240px, 29vw, 350px); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.product-image-well--alternate { background: #ecece9; }
-.image-category { font: italic clamp(2.75rem, 5.5vw, 5rem)/1.1 var(--serif); letter-spacing: -.04em; color: rgba(59, 73, 103, .24); }
-.photo-note { position: absolute; bottom: 1.15rem; inset-inline: 1rem; font-size: .75rem; text-align: center; color: var(--muted); }
-.product-caption { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem 1rem; padding-top: .75rem; }
-.product-caption h2 { font-size: 1.375rem; line-height: 1.3; }
-.product-caption p { font-size: .75rem; color: var(--muted); }
+@media (min-width: 1000px) { .product-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.product-image-well { position: relative; background: #f0efeb; aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.product-image-well img { width: 100%; height: 100%; object-fit: cover; }
+.product-badge { position: absolute; top: .75rem; right: .75rem; padding: .45rem .7rem; background: #fff; font: .75rem/1.2 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; }
+.product-caption { padding-top: .9rem; }
+.product-caption h2 { font: 400 1.125rem/1.4 var(--sans); }
+.product-price { margin-top: .2rem; font: .875rem/1.4 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .08em; }
 .newsletter { display: grid; grid-template-columns: 1fr 1.25fr; align-items: start; gap: 2.5rem; border-top: 1px solid var(--rule); padding-block: 1rem; }
 .newsletter h2 { font: 400 1rem/1.6 var(--sans); padding-block: .55rem; }
 .email-row { display: flex; gap: .75rem; border-bottom: 1px solid var(--rule); }
@@ -86,33 +80,24 @@ h1 > span { color: var(--red); }
 .story-copy { max-width: 47rem; padding-block: .5rem 1.5rem; }
 .story-copy p { margin-bottom: 1rem; line-height: 1.8; }
 .story-copy .founders { font-family: var(--serif); margin-bottom: 0; }
-.roots-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
-.roots-gallery img { width: 100%; height: clamp(160px, 21vw, 250px); object-fit: cover; background: #f0efeb; }
-.roots-gallery .roots-fenway { object-position: 50% 85%; }
-.roots-gallery .roots-beach-sand { object-position: 50% 55%; }
-.roots-gallery .roots-beach-ocean { object-position: 60% 47%; }
 @keyframes logo-turn { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
 @media (max-width: 700px) {
   .site-header { grid-template-columns: 1fr 6rem 1fr; min-height: 130px; }
   .site-header nav { font-size: .875rem; }
-  .header-roots { font-size: .8125rem; }
-  .header-roots span { display: block; }
-  .nav-right { flex-direction: column; align-items: flex-end; gap: 0 !important; }
-  .nav-right a { padding-block: .3rem !important; }
+  .site-header nav { flex-direction: column; gap: 0; }
+  .site-header nav a { padding-block: .3rem; }
+  .nav-left { align-items: flex-start; }
+  .nav-right { align-items: flex-end; }
   .emblem-scene { width: 67px; height: 97px; }
   .brand-banner p { font-size: 1rem; }
   .lifestyle { gap: 2px; }
-  .release { padding-block: 1.25rem 1.5rem; }
-  .release-heading { margin-bottom: 1rem; }
-  h1 { font-size: clamp(2.4rem, 8vw, 3.25rem); }
-  .release-timing { font-size: .8125rem; }
+  .release { padding-block: 1.75rem 1.75rem; }
+  .release-title { margin-bottom: 1.1rem; font-size: 1.375rem; }
   .product-grid { gap: .85rem; }
-  .product-image-well { height: clamp(190px, 47vw, 290px); }
-  .image-category { font-size: clamp(2rem, 6.5vw, 3rem); }
-  .photo-note { font-size: .75rem; bottom: .75rem; inset-inline: .5rem; line-height: 1.4; }
-  .product-caption { display: block; padding-top: .55rem; }
-  .product-caption h2 { font-size: 1.25rem; }
-  .product-caption p { margin-top: .2rem; }
+  .product-badge { top: .5rem; right: .5rem; padding: .3rem .45rem; font-size: .625rem; letter-spacing: .05em; }
+  .product-caption { padding-top: .55rem; }
+  .product-caption h2 { font-size: 1rem; }
+  .product-price { font-size: .8125rem; }
   .newsletter { grid-template-columns: 1fr; gap: .3rem; padding-block: .9rem; }
   .newsletter h2 { font-size: .9375rem; padding: 0; }
   .email-row { gap: .65rem; }
@@ -121,8 +106,6 @@ h1 > span { color: var(--red); }
   .story summary { gap: 1rem; }
   .story summary > span:first-child { max-width: 12rem; font-size: 1rem; }
   .story-toggle { gap: .5rem; font-size: .8125rem; }
-  .roots-gallery { gap: .4rem; }
-  .roots-gallery img { height: clamp(135px, 33vw, 220px); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

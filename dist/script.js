@@ -50,6 +50,8 @@ if (motionButton && rotor) {
 }
 
 const story = document.querySelector('#story');
-document.querySelector('#story-link')?.addEventListener('click', () => {
-  if (story) story.open = true;
+document.querySelectorAll('[data-open-story]').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (story) story.open = true;
+  });
 });

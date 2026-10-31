@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#FAF9F6">
-  <meta name="description" content="Zephyr Archive. Drop One: hats and hoodies arriving November. Deep Roots, Worn Everywhere.">
-  <title>Zephyr Archive — Drop One</title>
+  <meta name="description" content="Zephyr Archive. Founders Drop: two hats arriving November. Deep Roots, Worn Everywhere.">
+  <title>Zephyr Archive — Founders Drop</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=7">
-  <script src="script.js?v=3" defer></script>
+  <link rel="stylesheet" href="styles.css?v=12">
+  <script src="script.js?v=4" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header page-width">
-    <p class="header-roots">Rooted in <span>New England.</span></p>
+    <!-- Shop and About point at on-page sections until their own pages exist. -->
+    <nav class="nav-left" aria-label="Site navigation"><a href="#release">Shop</a><a href="#story" data-open-story>About</a></nav>
     <div class="brand-center">
       <button class="emblem-control" id="logo-motion" type="button" aria-label="Start logo rotation" title="Start logo rotation" disabled>
         <span class="emblem-scene">
@@ -28,7 +29,7 @@
       </button>
       <span class="sr-only">Zephyr Archive</span>
     </div>
-    <nav class="nav-right" aria-label="Brand navigation"><a href="#story" id="story-link">Our story</a><a href="#stay-in-the-loop">Get notified</a></nav>
+    <nav class="nav-right" aria-label="Brand navigation"><a href="#story" data-open-story>Our story</a><a href="#stay-in-the-loop">Get notified</a></nav>
   </header>
   <main id="main">
     <div class="brand-banner"><p>For those that live between worlds.</p></div>
@@ -37,20 +38,17 @@
       <img class="lifestyle-harbor" src="assets/lifestyle-harbor.jpg" alt="The same man in the red and white Zephyr Z cap stands with his hands in his pockets above a working harbor lined with lobster boats." width="1400" height="1750" decoding="async">
     </section>
     <section class="release page-width" id="release" aria-labelledby="release-title">
-      <div class="release-heading">
-        <h1 id="release-title">Drop One<span>.</span></h1>
-        <div class="release-timing"><p>Arriving November</p><span>Hats &amp; hoodies</span></div>
-      </div>
+      <h1 class="release-title" id="release-title">Founders Drop</h1>
       <div class="product-grid">
-        <article class="product-preview" aria-labelledby="hats-title">
-          <!-- Replace this well with the actual hat photograph when supplied. -->
-          <div class="product-image-well"><span class="image-category" aria-hidden="true">Hats.</span><p class="photo-note">Product photography to come</p></div>
-          <div class="product-caption"><h2 id="hats-title">Hats</h2><p>Coming November</p></div>
+        <article class="product-card" aria-labelledby="hat-1-title">
+          <!-- "Hat 01" is a placeholder name until the product name is confirmed. -->
+          <div class="product-image-well"><img src="assets/hat-blue.jpg" alt="Blue cap with a white embroidered Z and Zephyr script logo, front view." width="1200" height="1600" loading="lazy" decoding="async"><span class="product-badge">Coming November</span></div>
+          <div class="product-caption"><h2 id="hat-1-title">Hat 01</h2><p class="product-price">$38</p></div>
         </article>
-        <article class="product-preview" aria-labelledby="hoodies-title">
-          <!-- Replace this well with the actual hoodie photograph when supplied. -->
-          <div class="product-image-well product-image-well--alternate"><span class="image-category" aria-hidden="true">Hoodies.</span><p class="photo-note">Product photography to come</p></div>
-          <div class="product-caption"><h2 id="hoodies-title">Hoodies</h2><p>Coming November</p></div>
+        <article class="product-card" aria-labelledby="hat-2-title">
+          <!-- "Hat 02" is a placeholder name until the product name is confirmed. -->
+          <div class="product-image-well"><img src="assets/hat-white-red.jpg" alt="White cap with a red brim, red button, and red embroidered Z and Zephyr script logo, front view." width="1200" height="1600" loading="lazy" decoding="async"><span class="product-badge">Coming November</span></div>
+          <div class="product-caption"><h2 id="hat-2-title">Hat 02</h2><p class="product-price">$38</p></div>
         </article>
       </div>
     </section>
@@ -73,11 +71,6 @@
           <p class="founders">— Chris &amp; Paddy DeBruyne</p>
         </div>
       </details>
-      <div class="roots-gallery" aria-label="Zephyr Archive, worn everywhere">
-        <img class="roots-fenway" src="assets/roots-fenway.jpg" alt="A red and white Zephyr cap in the stands at Fenway Park." width="1012" height="1800" loading="lazy" decoding="async">
-        <img class="roots-beach-sand" src="assets/roots-beach-sand.jpg" alt="A blue Zephyr cap resting on sandals in the sand, with ocean waves behind it." width="1200" height="1600" loading="lazy" decoding="async">
-        <img class="roots-beach-ocean" src="assets/roots-beach-ocean.jpg" alt="A blue Zephyr cap on a sand formation overlooking the beach." width="1200" height="1600" loading="lazy" decoding="async">
-      </div>
     </section>
   </main>
 </body>

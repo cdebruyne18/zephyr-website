@@ -1,6 +1,6 @@
 # Zephyr Archive — local website mockup
 
-The website mockup is built in `dist/` using plain HTML, CSS, and JavaScript. The revised layout leads with the supplied Z artwork, a small brand banner, and Drop One. It has not been published. The original brand and implementation handoff is preserved alongside the code.
+The website mockup is built in `dist/` using plain HTML, CSS, and JavaScript. The revised layout leads with the supplied Z artwork, a small brand banner, and the Founders Drop. It has not been published. The original brand and implementation handoff is preserved alongside the code.
 
 ## Start here
 
@@ -20,14 +20,14 @@ Keep that terminal running while you work. Stop it with Control+C. If port 5173 
 
 ## Current behavior and remaining inputs
 
-- Header links open the story and jump to the notification form.
+- The header has Shop and About on the left and Our story and Get notified on the right. Shop jumps to the Founders Drop and About opens the story for now; both will later point to their own pages.
 - The page uses #FAF9F6 for a hint of cream, navy text, and restrained red accents. The original cream remains a brand color.
 - The original Z artwork is centered in the header, with a continuous CSS perspective rotation at a constant speed (one full turn every 14 seconds). Click the mark to pause or resume. Reduced-motion preferences keep it still. This is a rotating flat graphic, not a modeled 3D object.
-- Two full-width lifestyle photos (lobster traps and the harbor) sit side by side directly under the red brand banner, so they are the first thing visitors see. Drop One and both product categories follow; the old passport hero is still gone. The story is collapsed by default and can be opened from the header or its own disclosure.
-- “Rooted in New England.” sits at the top left; the bottom footer is removed. The brand banner uses red #A24857 with cream #EDE5D3 lettering.
-- “First to know.” is a simple email row. The Deep Roots section includes the three supplied Fenway and beach photographs in a compact strip.
+- Two full-width lifestyle photos (lobster traps and the harbor) sit side by side directly under the red brand banner, so they are the first thing visitors see. The Founders Drop follows as a product grid (four columns on wide screens, two on smaller ones) with two hat tiles (“Hat 01” and “Hat 02”, placeholder names) at the user-supplied price of $38 each; the old passport hero is still gone. The story is collapsed by default and can be opened from the header or its own disclosure.
+- The bottom footer is removed. The brand banner uses red #A24857 with cream #EDE5D3 lettering.
+- “First to know.” is a simple email row.
 - The favicon uses the supplied serif logo; original image files are unchanged.
-- Hat and hoodie image areas deliberately say “Product photography to come.” No garment specifications, product prices, or exact launch date have been invented.
+- Both Founders Drop tiles show the user-supplied hat product photos (blue, and white with a red brim). The $38 price came from the user; “Hat 01” and “Hat 02” are placeholder names, and no garment specifications or exact launch date have been invented.
 - The form uses native email validation and displays an honest demo confirmation. It sends no requests and stores no email addresses.
 - Layout rules cover desktop and mobile, with visible keyboard focus and reduced-motion support. Browser interaction and viewport testing have not yet been performed.
 - Checked JavaScript syntax, local assets, navigation targets, and unchanged reference image checksums. The local server returned HTTP 200 and Safari opened the page successfully.
@@ -48,7 +48,7 @@ The live reference website supplied by the user is https://zephyrarchive.com. It
 
 ## Recommended direction
 
-Use a nearly white `#FAF9F6` background with navy `#3B4967` and red `#A24857`. Center the Z artwork above a narrow **“For those that live between worlds.”** banner, then lead with the two waterfront lifestyle photos, followed by **Drop One** and the two product categories. Keep the signup compact and the full story behind its disclosure. These are the user's revisions to the original direction.
+Use a nearly white `#FAF9F6` background with navy `#3B4967` and red `#A24857`. Center the Z artwork above a narrow **“For those that live between worlds.”** banner, then lead with the two waterfront lifestyle photos, followed by the **Founders Drop** product grid. Keep the signup compact and the full story behind its disclosure. These are the user's revisions to the original direction.
 
 The biggest missing piece is actual product photography. Exact release date, prices, colors, fit, materials, and product names remain unconfirmed. None are invented in the starter content.
 
