@@ -121,7 +121,7 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
   show(0);
 });
 
-// Cart and footer links are placeholders until their pages exist.
+// Footer links are placeholders until their pages exist.
 document.querySelectorAll('[data-placeholder-link]').forEach((link) => {
   link.addEventListener('click', (event) => event.preventDefault());
 });
