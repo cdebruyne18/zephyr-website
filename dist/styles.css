@@ -123,6 +123,31 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .story-copy { max-width: 47rem; padding-block: .5rem 1.5rem; }
 .story-copy p { margin-bottom: 1rem; line-height: 1.8; }
 .story-copy .founders { font-family: var(--serif); margin-bottom: 0; }
+/* About page: photo beside the brand story. */
+.about-page { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.75rem, 5vw, 4.5rem); align-items: center; padding-block: 2.5rem 3.5rem; }
+.about-photo { margin: 0; }
+.about-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: calc(100vh - 14rem); object-fit: cover; background: #f0efeb; }
+.about-copy { max-width: 34rem; }
+.about-title { margin-top: .5rem; font-size: clamp(2.25rem, 4vw, 3.25rem); line-height: 1.1; letter-spacing: -.03em; }
+.about-lede { margin-top: .75rem; font: italic 1.125rem/1.5 var(--serif); color: var(--red); }
+.about-copy p:not(.product-kicker):not(.about-lede) { margin-top: 1.25rem; line-height: 1.8; }
+.about-copy .founders { font-family: var(--serif); }
+.about-shop { display: inline-block; margin-top: 2rem; padding-block: .3rem; font-size: .875rem; text-decoration: none; border-bottom: 1px solid currentColor; }
+.about-shop:hover { color: var(--red); }
+.about-shop span { margin-left: .5rem; }
+.nav-left a[aria-current="page"] { text-decoration: underline; }
+/* Policy pages: long-form text at a readable measure. */
+.policy-page { padding-block: 2.5rem 3.5rem; }
+.policy-page > * { max-width: 44rem; }
+.policy-title { font: 400 clamp(1.75rem, 3vw, 2.5rem)/1.15 var(--sans); letter-spacing: .01em; }
+.policy-updated { margin-top: .5rem; font-size: .8125rem; color: var(--muted); }
+.policy-page h2 { margin-top: 2.25rem; font: 600 .8125rem/1.4 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+.policy-page h1 + .policy-updated + p { margin-top: 1.75rem; }
+.policy-page p, .policy-page ul, .policy-page ol { margin-top: .75rem; line-height: 1.75; }
+.policy-page ul, .policy-page ol { padding-left: 1.25rem; }
+.policy-page li + li { margin-top: .35rem; }
+.policy-fill { padding: 0 .2em; background: rgba(162, 72, 87, .14); }
+.footer-links a[aria-current="page"] { color: var(--navy); }
 .site-footer { border-top: 1px solid var(--rule); padding-block: 1.5rem 2.5rem; }
 .footer-links { display: flex; flex-wrap: wrap; gap: .5rem 2rem; margin: 0; padding: 0; list-style: none; font-size: .8125rem; }
 .footer-links a { display: inline-block; padding-block: .3rem; color: var(--muted); text-decoration: none; }
@@ -162,6 +187,10 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
   .story-toggle { gap: .5rem; font-size: .8125rem; }
   .site-footer { padding-block: 1.1rem 2rem; }
   .footer-links { gap: .25rem 1.25rem; }
+  .policy-page { padding-block: 1.5rem 2.5rem; }
+  .about-page { grid-template-columns: 1fr; padding-block: 1.25rem 2.5rem; }
+  .about-photo img { max-height: none; }
+  .policy-title { font-size: 1.75rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
