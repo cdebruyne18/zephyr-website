@@ -40,15 +40,6 @@ if (rotor) {
   updateMotion();
 }
 
-const story = document.querySelector('#story');
-document.querySelectorAll('[data-open-story]').forEach((link) => {
-  link.addEventListener('click', () => {
-    if (story) story.open = true;
-  });
-});
-// Product pages link to index.html#story; open it on arrival.
-if (story && window.location.hash === '#story') story.open = true;
-
 // Product gallery: thumbnails, arrows, and the counter are built from the slides in the HTML.
 document.querySelectorAll('[data-gallery]').forEach((gallery) => {
   const slides = [...gallery.querySelectorAll('.gallery-slide')];
@@ -178,9 +169,4 @@ document.querySelectorAll('[data-gallery]').forEach((gallery) => {
     viewerStartX = null;
     if (Math.abs(distance) > 40) step(distance < 0 ? 1 : -1);
   });
-});
-
-// Footer links are placeholders until their pages exist.
-document.querySelectorAll('[data-placeholder-link]').forEach((link) => {
-  link.addEventListener('click', (event) => event.preventDefault());
 });
