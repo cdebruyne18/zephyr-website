@@ -23,3 +23,4 @@
   - `hat-blue-angle.jpg`: before processing, a patch of white mesh texture and purple specks under the back of the crown (source x 405–570, y 880–990) was painted to background with a 2 px feathered edge.
   - `hat-white-red-angle.jpg`: no retouching.
 - `about-harbor.jpg`: 1200×1500 (quality 85), a 4:5 crop (rows 900–6700) of a 4640×6960 harbor photo the user supplied in chat on 2026-10-30. It is the About page photo, replacing the lobster-traps photo there (that photo is still used in the Hat 02 gallery).
+- `hat-white-red-lifestyle.jpg`: 1200×1500 (quality 85), resized from a 3935×4919 photo the user supplied in chat on 2026-11-01 (white-and-red cap, red chore coat, lobster traps). It is now the only lifestyle photo in the Hat 02 gallery; `hat-white-red-traps.jpg`, `hat-white-red-pub.jpg`, and `hat-white-red-beach.jpg` were taken out of the gallery at the user's request and are kept, unused.
