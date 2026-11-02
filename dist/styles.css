@@ -112,6 +112,13 @@ html.has-lightbox { overflow: hidden; }
 .product-kicker { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .product-name { margin-top: .4rem; font: 400 clamp(1.75rem, 3vw, 2.5rem)/1.15 var(--sans); letter-spacing: .01em; }
 .product-info .product-price { margin-top: .6rem; font-size: 1rem; }
+.product-colors { display: flex; align-items: center; gap: .6rem; margin-top: 1.25rem; }
+.color-swatch { display: block; width: 1.5rem; height: 1.5rem; border: 1px solid var(--rule); outline-offset: 3px; }
+.color-swatch--blue { background: #3f68a8; }
+.color-swatch--white-red { background: linear-gradient(#f7f6f2 50%, #c0282d 50%); }
+.color-swatch:hover { outline: 1px solid var(--muted); }
+.color-swatch[aria-current="page"] { outline: 1.5px solid var(--navy); }
+.color-name { margin-left: .4rem; font: .875rem/1.4 ui-monospace, "Cascadia Mono", Consolas, monospace; letter-spacing: .04em; }
 .product-description { max-width: 28rem; margin-top: 1.25rem; line-height: 1.7; }
 .product-availability { margin-top: 1.5rem; font-size: .875rem; color: var(--red); }
 .product-buy { margin-top: .75rem; }
