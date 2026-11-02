@@ -50,8 +50,6 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 .emblem-face { position: absolute; inset: 0; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; }
 .emblem-front { transform: translateZ(1px); }
 .emblem-back { transform: rotateY(180deg) translateZ(1px); }
-.brand-banner { background: var(--red); color: var(--cream); text-align: center; padding: .55rem 1rem; }
-.brand-banner p { font: italic 1.1rem/1.5 var(--serif); }
 .lifestyle { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
 .lifestyle img { width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 92vh; object-fit: cover; background: #f0efeb; }
 .lifestyle .lifestyle-tote { object-position: 50% 30%; }
@@ -177,7 +175,6 @@ html.has-lightbox { overflow: hidden; }
   .site-header .nav-left { align-items: flex-start; }
   .site-header .nav-right { align-items: flex-end; }
   .emblem-scene { width: 67px; height: 97px; }
-  .brand-banner p { font-size: 1rem; }
   .lifestyle { gap: 2px; }
   .release { padding-block: 1.75rem 1.75rem; }
   .release-title { margin-bottom: 1.1rem; font-size: 1.375rem; }
