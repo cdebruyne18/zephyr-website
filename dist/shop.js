@@ -1,17 +1,55 @@
 // Shopify Buy Button: a Buy now button on each hat page and one shared cart, opened from the header cart icon.
 // The storefront access token is Shopify's public, read-only key for the Buy Button sales channel.
 (function () {
-  // Sales are paused until Shopify Payments is connected: Buy now becomes Get notified, the cart icon is hidden,
-  // and the Buy Button SDK is not loaded. Set to false to turn sales back on.
-  const SALES_PAUSED = true;
-  if (SALES_PAUSED) {
-    document.documentElement.classList.add('sales-paused');
+  // Launch times (Eastern). The early access page (<body data-access="early">) opens at EARLY_ACCESS_OPENS; the
+  // hat pages open at PUBLIC_LAUNCH. Until then each Buy now spot shows a disabled "opens" button and the SDK and
+  // cart are not loaded. This only gates the website; Shopify's sales channels must be gated too (see README).
+  const EARLY_ACCESS_OPENS = '2026-11-11T16:00:00-05:00';
+  const PUBLIC_LAUNCH = '2026-11-12T16:00:00-05:00';
+  // Master switch while Shopify Payments isn't connected: keeps buying off even after the launch times.
+  const SALES_PAUSED = false;
+
+  const isEarly = document.body.dataset.access === 'early';
+  const opensAt = Date.parse(isEarly ? EARLY_ACCESS_OPENS : PUBLIC_LAUNCH);
+  const closedText = isEarly ? 'Opens 11.11 at 4PM ET' : 'Drops 11.12 at 4PM ET';
+
+  function showClosed(text) {
     document.querySelectorAll('.product-buy').forEach((mount) => {
-      mount.innerHTML = '<a class="product-cta" href="index.html#stay-in-the-loop">Get notified</a>';
+      mount.innerHTML = `<button class="product-cta" type="button" disabled>${text}</button>`;
     });
-    return;
   }
 
+  // Current time from the server's Date header, so changing the device clock doesn't open sales early.
+  // On localhost only, ?now=<ISO time> previews any moment, e.g. ?now=2026-11-12T16:01:00-05:00.
+  async function currentTime() {
+    const local = ['localhost', '127.0.0.1'].includes(location.hostname);
+    const preview = local && Date.parse(new URLSearchParams(location.search).get('now') || '');
+    if (preview) return preview;
+    try {
+      const response = await fetch(location.pathname, { method: 'HEAD', cache: 'no-store' });
+      const serverTime = Date.parse(response.headers.get('date') || '');
+      if (serverTime) return serverTime;
+    } catch {}
+    return Date.now();
+  }
+
+  currentTime().then((now) => {
+    if (now < opensAt) {
+      showClosed(closedText);
+      // Reopen on its own if the page is left open past the launch time.
+      const wait = opensAt - now;
+      if (wait < 2 ** 31 - 1) setTimeout(() => location.reload(), wait + 1000);
+      return;
+    }
+    if (SALES_PAUSED) {
+      showClosed('Coming soon');
+      return;
+    }
+    document.documentElement.classList.add('sales-open');
+    startShop();
+  });
+
+  function startShop() {
   const SHOP = {
     domain: '6jwzsw-z6.myshopify.com',
     storefrontAccessToken: '7abe7bd8b798d62a907f0c1d5015c142',
@@ -138,4 +176,5 @@
   script.src = SDK_URL;
   script.onload = init;
   document.head.append(script);
+  }
 })();

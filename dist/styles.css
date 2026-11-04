@@ -39,8 +39,9 @@ h1, h2 { font-family: var(--serif); font-weight: 400; }
 /* Shopify's floating cart tab is replaced by the header cart icon. */
 .shopify-buy-frame--toggle { display: none !important; }
 .cart-link:hover { color: var(--red); }
-/* While sales are paused (shop.js), there is no cart to open. */
-.sales-paused .cart-link { display: none; }
+/* The cart icon only shows once shop.js opens sales (launch time reached and not paused). */
+.cart-link { display: none; }
+.sales-open .cart-link { display: inline-flex; }
 .brand-center { justify-self: center; }
 .emblem-control { display: block; position: relative; padding: .2rem .8rem; color: var(--navy); }
 .emblem-scene { display: block; perspective: 650px; width: 86px; height: 124px; }
@@ -125,6 +126,12 @@ html.has-lightbox { overflow: hidden; }
 .product-buy .shopify-buy-frame, .product-buy iframe { width: 100% !important; max-width: 100% !important; }
 .product-cta { display: block; width: 100%; padding: .9rem 1rem; border: 0; font-family: inherit; background: var(--navy); color: var(--paper); font-size: .875rem; letter-spacing: .06em; text-align: center; text-decoration: none; text-transform: uppercase; }
 .product-cta:hover { background: var(--red); }
+.product-cta:disabled { background: transparent; color: var(--navy); box-shadow: inset 0 0 0 1px var(--navy); }
+/* Early access page. */
+.early-access .release-title { margin-top: .4rem; }
+.early-intro { max-width: 34rem; margin: -.75rem 0 1.75rem; line-height: 1.7; }
+.early-color { margin-top: .1rem; font-size: .8125rem; color: var(--muted); }
+.early-access .product-buy { margin-top: 1rem; }
 .newsletter { display: grid; grid-template-columns: 1fr 1.25fr; align-items: start; gap: 2.5rem; border-top: 1px solid var(--rule); padding-block: 1rem; }
 .newsletter h2 { font: 400 1rem/1.6 var(--sans); padding-block: .55rem; }
 .email-row { display: flex; gap: .75rem; border-bottom: 1px solid var(--rule); }
