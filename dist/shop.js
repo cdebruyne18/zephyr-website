@@ -5,8 +5,7 @@
   // hat pages open at PUBLIC_LAUNCH. Until then each Buy now spot shows a disabled "opens" button and the SDK and
   // cart are not loaded. This only gates the website; Shopify's sales channels must be gated too (see README).
   const EARLY_ACCESS_OPENS = '2026-11-11T16:00:00-05:00';
-  // TEMPORARY (2026-11-09): opened early for a friend's test order. Restore to '2026-11-12T16:00:00-05:00' afterwards.
-  const PUBLIC_LAUNCH = '2026-11-09T00:00:00-05:00';
+  const PUBLIC_LAUNCH = '2026-11-12T16:00:00-05:00';
   // Master switch while Shopify Payments isn't connected: keeps buying off even after the launch times.
   const SALES_PAUSED = false;
 
