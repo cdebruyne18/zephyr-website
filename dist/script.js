@@ -1,24 +1,3 @@
-// Email signup: submits to Shopify in a new tab (target=_blank in index.html), the same list as the store's own
-// signup. It is not sent in the background: Shopify's spam check (hCaptcha) can't run there, so those signups
-// were silently dropped. The visitor finishes in Shopify's tab and keeps this page open.
-const form = document.querySelector('#notification-form');
-const email = document.querySelector('#email');
-const status = document.querySelector('#signup-status');
-
-if (form && email && status) {
-  form.addEventListener('submit', (event) => {
-    if (!form.reportValidity()) {
-      event.preventDefault();
-      return;
-    }
-    status.textContent = 'Almost there. Finish signing up in the Shopify tab that just opened.';
-  });
-
-  email.addEventListener('input', () => {
-    status.textContent = '';
-  });
-}
-
 // The original flat artwork rotates in CSS perspective; it is not a 3D mesh. The logo links home; rotation
 // pauses on hover or keyboard focus (styles.css) and stays off when the visitor prefers reduced motion.
 const rotor = document.querySelector('#emblem-rotor');
