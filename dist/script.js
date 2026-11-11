@@ -1,7 +1,6 @@
-// Email signup: sends the form to Shopify's customer form in the background, the same list as the store's own
-// signup, so visitors stay on this site. This requires Shopify's hCaptcha to be off for contact forms (Online Store >
-// Preferences > Spam protection); with it on, Shopify silently drops these. Shopify's reply can't be read from another
-// site, so a completed request is treated as success.
+// Email signup: sends the form to Shopify in the background, the same way the store's own signup works, so
+// subscribers land in Shopify's customer list. Shopify's reply can't be read from another site, so a completed
+// request is treated as success.
 const form = document.querySelector('#notification-form');
 const email = document.querySelector('#email');
 const button = document.querySelector('#notify-button');
