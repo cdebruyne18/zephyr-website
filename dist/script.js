@@ -12,7 +12,6 @@ if (form && email && status) {
       return;
     }
     status.textContent = 'Almost there. Finish signing up in the Shopify tab that just opened.';
-    setTimeout(() => form.reset(), 0);
   });
 
   email.addEventListener('input', () => {
