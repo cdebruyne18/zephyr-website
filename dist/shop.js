@@ -4,8 +4,10 @@
   // Launch times (Eastern). The early access page (<body data-access="early">) opens at EARLY_ACCESS_OPENS; the
   // hat pages open at PUBLIC_LAUNCH. Until then each Buy now spot shows a disabled "opens" button and the SDK and
   // cart are not loaded. This only gates the website; Shopify's sales channels must be gated too (see README).
-  const EARLY_ACCESS_OPENS = '2026-11-11T16:00:00-05:00';
-  const PUBLIC_LAUNCH = '2026-11-12T16:00:00-05:00';
+  // TEMPORARY (2026-11-10): opened for a test. Restore EARLY_ACCESS_OPENS to '2026-11-11T16:00:00-05:00'
+  // and PUBLIC_LAUNCH to '2026-11-12T16:00:00-05:00' afterwards.
+  const EARLY_ACCESS_OPENS = '2026-11-10T00:00:00-05:00';
+  const PUBLIC_LAUNCH = '2026-11-10T00:00:00-05:00';
   // Master switch while Shopify Payments isn't connected: keeps buying off even after the launch times.
   const SALES_PAUSED = false;
 
