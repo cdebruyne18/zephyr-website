@@ -7,8 +7,8 @@
   <meta name="description" content="Zephyr Archive. Founders Drop: two hats arriving November. Deep Roots, Worn Everywhere.">
   <title>Zephyr Archive — Founders Drop</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=43">
-  <script src="script.js?v=17" defer></script>
+  <link rel="stylesheet" href="styles.css?v=44">
+  <script src="script.js?v=18" defer></script>
   <script src="shop.js?v=11" defer></script>
 </head>
 <body id="top">
@@ -57,12 +57,15 @@
     </section>
     <section class="newsletter page-width" id="stay-in-the-loop" aria-labelledby="newsletter-title">
       <h2 id="newsletter-title">First to know.</h2>
-      <!-- Signups happen on Shopify's own signup page, whose form adds people straight to Shopify customers (tagged
-           newsletter, prelaunch-2026). A form on this site can't submit to it: Shopify's spam protection rejects it. -->
-      <div class="signup-link">
-        <a class="signup-button" href="https://shop.zephyrarchive.com/password#zephyr-signal" target="_blank" rel="noopener">Sign up for updates <span aria-hidden="true">→</span><span class="sr-only"> (opens in a new tab)</span></a>
-        <p class="signup-consent">Opens our Shopify signup. By signing up, you agree to receive emails from Zephyr Archive. Unsubscribe anytime. <a href="privacy-policy.html">Privacy Policy</a>.</p>
-      </div>
+      <!-- Signup goes to /api/subscribe (dist/api/subscribe.js), which adds the email to Shopify customers through
+           the Admin API: subscribed to email marketing, tagged newsletter, prelaunch-2026, website. -->
+      <form id="notification-form" action="/api/subscribe" method="post" novalidate aria-describedby="signup-consent">
+        <label class="sr-only" for="email">Email address</label>
+        <div class="email-row"><input type="email" id="email" name="email" placeholder="Email address" autocomplete="email" autocapitalize="none" spellcheck="false" required aria-describedby="signup-consent signup-status"><button type="submit" id="notify-button">Notify me <span aria-hidden="true">→</span></button></div>
+        <div class="hp-field" aria-hidden="true"><label for="company">Company</label><input type="text" id="company" name="company" tabindex="-1" autocomplete="off"></div>
+        <p class="signup-consent" id="signup-consent">By signing up, you agree to receive emails from Zephyr Archive. Unsubscribe anytime. <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        <p class="signup-status" id="signup-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </form>
     </section>
   </main>
   <footer class="site-footer page-width">

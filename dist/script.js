@@ -1,3 +1,43 @@
+// Email signup: posts to /api/subscribe (dist/api/subscribe.js), which adds the email to Shopify customers. The
+// success message only shows once Shopify has confirmed it.
+const form = document.querySelector('#notification-form');
+const email = document.querySelector('#email');
+const button = document.querySelector('#notify-button');
+const status = document.querySelector('#signup-status');
+
+if (form && email && button && status) {
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!email.checkValidity()) {
+      status.textContent = 'Please enter a valid email address.';
+      email.focus();
+      return;
+    }
+
+    button.disabled = true;
+    status.textContent = 'Signing you up…';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email.value, company: form.elements.company?.value || '' }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) throw new Error(result.error || 'Something went wrong. Please try again.');
+      form.reset();
+      status.textContent = 'You’re on the list. We’ll email you when the Founders Drop goes live.';
+    } catch (error) {
+      status.textContent = error.message || 'Something went wrong. Please try again.';
+    } finally {
+      button.disabled = false;
+    }
+  });
+
+  email.addEventListener('input', () => {
+    status.textContent = '';
+  });
+}
+
 // The original flat artwork rotates in CSS perspective; it is not a 3D mesh. The logo links home; rotation
 // pauses on hover or keyboard focus (styles.css) and stays off when the visitor prefers reduced motion.
 const rotor = document.querySelector('#emblem-rotor');

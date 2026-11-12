@@ -141,10 +141,9 @@ html.has-lightbox { overflow: hidden; }
 .email-row button span { margin-left: .8rem; }
 .email-row button:hover:not(:disabled) { color: var(--red); }
 .email-row button:disabled { opacity: .55; }
-.signup-button { display: inline-block; padding: .55rem 0; border-bottom: 1px solid var(--rule); color: var(--navy); font-size: .9375rem; text-decoration: none; }
-.signup-button:hover { color: var(--red); }
-.signup-button span[aria-hidden] { margin-left: .6rem; }
 .signup-consent { margin-top: .5rem; font-size: .75rem; color: var(--muted); }
+/* Hidden spam trap for /api/subscribe: off-screen, so people never fill it in. */
+.hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .signup-consent a { color: inherit; }
 .signup-status { margin-top: .4rem; font-size: .875rem; }
 .signup-status:empty { margin: 0; }
